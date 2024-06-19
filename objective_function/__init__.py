@@ -1,0 +1,1 @@
+from .cost_distance import get_function
