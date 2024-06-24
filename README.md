@@ -1,76 +1,84 @@
-# Logistic Delivery Optimization
-To become a good or efficient logistics manager, it requires significant experience and the consideration of various factors such as time, fuel prices, traffic, availability of manpower, and more. This project will introduced the concept of metaheuristic optimization in optimizing the cost of delivering goods to customers. The metaheuristic used in this project is Grey Wolf Optimizer (GWO) due to its simplistic explaination to public.
+# Route Optimization
 
+## Introduction
 
-# What is Metaheuristic Optimization?
-Generally, optimization expert divide optimization technique to two main branches which were heuristic approach and metaheuristic approach. So whats the differences? In a simple word, heuristic approach refer to greedy approach or by computing all possible computation in order to find the optimal solution while metaheuristic are basically used intelligent computation (typically mimic real-world scenario) to solve a problem that consumed least amount of time compared to heuristic approach.
+Route optimization is a critical process in logistics and transportation that aims to find the most efficient path for vehicles or resources to travel between multiple locations. This repository explores various aspects of route optimization, including algorithms, real-world applications, and implementation strategies.
 
+## Table of Contents
 
-# Metaheuristic
-## Grey Wolf Optimizer
-Grey Wolf Optimizer or GWO were introduced by S. Mirjalili in 2014 which inspired by the grey wolves (Canis lupus). The main idea of this algorithm is the wolves action such as exploring area and hunting for food. Nevertheless, the full concept and implementation will not be discussed in this chapter.
+1. [Overview](#overview)
+2. [Key Concepts](#key-concepts)
+3. [Algorithms](#algorithms)
+4. [Applications](#applications)
+5. [Tools and Technologies](#tools-and-technologies)
+6. [Projects](#projects)
+7. [Getting Started](#getting-started)
+8. [Contributing](#contributing)
+9. [Resources](#resources)
+10. [License](#license)
 
+## Overview
 
-# Objective Function
-## 2-Opt Approach
-The main idea of this objective function is to take a route that crosses which each other and reoder it so that crossover wont occur. This method will compare every possible valid combination of the swapping mechanism. Again, this chapter will not cover the whole mechanism
+Route optimization involves minimizing travel time, distance, or cost while satisfying various constraints such as vehicle capacity, time windows, and delivery priorities. This field combines elements of graph theory, operations research, and computer science to solve complex logistical challenges.
 
+## Key Concepts
 
-# Experiment
+- **Traveling Salesman Problem (TSP)**: The foundational problem in route optimization
+- **Vehicle Routing Problem (VRP)**: An extension of TSP involving multiple vehicles
+- **Constraints**: Factors like time windows, capacity limits, and driver schedules
+- **Objective Functions**: Metrics to optimize (e.g., total distance, fuel consumption)
+- **Heuristics vs. Exact Methods**: Balancing solution quality with computational time
 
-## 000: Exploring GWO Base Hyperparameter
+## Algorithms
 
-The first experiment are to explored the capabilties of GWO in this optimization problem. Base hyper-parameter setting are with 10 search agents with 100 iterations. Furthermore, in this expriment, the algorithm will automatically choose the vehicle type for logistic delivery optimization.
+- Dijkstra's Algorithm
+- A* Search
+- Genetic Algorithms
+- Simulated Annealing
+- Ant Colony Optimization
+- Clarke and Wright Savings Algorithm
 
-<p align="center">
-  <img src="res/000.png" />
-</p>
-<p align="center">
-    <em>Figure 1: Cost-Distance-Vehicle Optimization</em>
-</p>
+## Applications
 
+- Delivery and Logistics
+- Public Transportation
+- Emergency Services
+- Waste Collection
+- Sales Territory Planning
+- Supply Chain Management
 
-## 001: Exploring GWO Iteration On Objective Function (Cost)
+## Tools and Technologies
 
-Based on the results belows, there are no correlation can be made from the increased iteration and the cost indicator. It is also seems that the GWO stuck in local optimal solution as no further minimization occur in between cost ranging from RM 1400 to RM 1500.
+- **Programming Languages**: Python, Java, C++
+- **Libraries**: Google OR-Tools, PuLP, OSRM
+- **GIS Tools**: QGIS, ArcGIS
+- **Visualization**: Matplotlib, Folium, D3.js
 
-<p align="center">
-    <table>
-        <tr>
-            <td><img src="res/001.png" width=360px height=360px></td>
-            <td><img src="res/002.png" width=360px height=360px></td>
-            <td><img src="res/003.png" width=360px height=360px></td>
-        </tr>
-    </table>
-</p>
+## Projects
 
-<p align="center">
-    <em>Figure 2: Iteration Impact On Optimization</em>
-</p>
+1. [Last-Mile Delivery Optimization](./last-mile-delivery)
+2. [Multi-Depot Vehicle Routing](./multi-depot-vrp)
+3. [Dynamic Route Planning](./dynamic-routing)
+4. [Green Vehicle Routing](./green-vrp)
 
+## Getting Started
 
-## 002: Exploring GWO Number Of Agents On Objective Function (Cost)
+To get started with the projects in this repository:
 
-Similiar to previous experiment, there are no clear correlation can be made based on the increase number of agents toward the objective function of cost. Again, the GWO seems to stuck at local optimal solution as no further minimization occur in between cost ranging from RM 1400 to RM 1500.
+1. Clone the repository
+2. Install required dependencies (see individual project READMEs)
+3. Explore the projects and their documentation
 
-<p align="center">
-    <table>
-        <tr>
-            <td><img src="res/004.png" width=360px height=360px></td>
-            <td><img src="res/005.png" width=360px height=360px></td>
-            <td><img src="res/006.png" width=360px height=360px></td>
-        </tr>
-        <tr>
-            <td><img src="res/007.png" width=360px height=360px></td>
-            <td><img src="res/008.png" width=360px height=360px></td>
-        </tr>
-    </table>
-</p>
+## Contributing
 
-<p align="center">
-    <em>Figure 3: Number Of Agent Impact On Optimization</em>
-</p>
+We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on how to submit pull requests, report issues, or suggest improvements.
 
+## Resources
 
-# Further Work Recommendation
-There are several improvement can be made to achieved better results such as introducing new objective function technique, introduced new algorithm, implement Simulated Annealing (SA) with GWO for better solution quality. While the experiment dont look promising, it is important to identify such problem and presented possible solution to make thing possible.
+- [Awesome Vehicle Routing](https://github.com/example/awesome-vehicle-routing)
+- [Introduction to Route Optimization](https://example.com/intro-route-optimization)
+- [Vehicle Routing Problem Repository](https://example.com/vrp-repository)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
