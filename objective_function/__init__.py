@@ -1,1 +1,1 @@
-from .cost_distance import get_function
+from .test_function import Sphere
