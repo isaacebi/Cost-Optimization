@@ -1,27 +1,36 @@
 # Optimizing Logistic Route: 99 Speedmart
 
-## Project Overview
+This project aims to optimize delivery routes for a fleet of vehicles, minimizing costs while meeting all stores demands and constraints.
+
+## Table of Contents
+- [Overview](#overview)
+- [Problem Statement](#problem-statement)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Overview
 
 This repository contains the code and documentation for optimizing the logistics routes of 99 Speedmart, a popular chain of convenience stores. The project aims to improve delivery efficiency, reduce costs, and enhance overall supply chain performance.
 
-## Table of Contents
+## Problem Statement
 
-1. [Introduction](#introduction)
-2. [Features](#features)
-3. [Getting Started](#getting-started)
-4. [Data](#data)
-5. [Methodology](#methodology)
-6. [Results](#results)
-7. [Contributing](#contributing)
-8. [License](#license)
+As a logistics manager for a local conveniece stores chain company, you need to optimize the routing of a fleet of vehicles to efficiently deliver goods to various customer locations. The goal is to minimize delivery costs while ensuring all delivery locations are visited and all demands are met.
 
-## Introduction
+### Constraints
 
-99 Speedmart operates numerous stores across various locations. Efficient logistics is crucial for maintaining stock levels and ensuring timely deliveries. This project focuses on developing an algorithm to optimize delivery routes, considering factors such as distance, traffic patterns, and delivery urgency.
+#### Hard Constraints:
+- Each delivery location must be visited exactly once.
+- The total demand for each vehicle route must not exceed its maximum capacity.
 
-## Features
+#### Soft Constraints:
+- Minimize the cost required to meet all demands.
 
-- Route optimization algorithm
-- Interactive map visualization
-- Performance metrics dashboard
-- Scenario planning tool
+### Assumptions:
+- Vehicles start and end their routes at the same depot location.
+- Each vehicle only travels one round trip (depart from depot and back to the depot).
+- There is no limit on the number of vehicles.
+- Travel times between any two locations are the same in both directions.
+- Deliveries can be made at any time; there are no time windows for deliveries.
