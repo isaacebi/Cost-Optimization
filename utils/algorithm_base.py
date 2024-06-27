@@ -22,7 +22,8 @@ class Optimizer(ABC):
         if score < self.best_score:
             self.best_score = score
             self.best_pos = pos.copy()
-            self.convergence_curve[:, iteration] = score
+
+        self.convergence_curve[:, iteration] = self.best_score
 
     def initialization(self):
     
