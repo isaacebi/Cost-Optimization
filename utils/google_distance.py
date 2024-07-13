@@ -5,10 +5,8 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import numpy as np
 
-
 class SeleniumGoogleMap:
-    def __init__(self, coordinates) -> None:
-        self.coordinates = coordinates
+    def __init__(self) -> None:
         self.browser = webdriver.Firefox()
 
         #######################
@@ -93,7 +91,7 @@ class SeleniumGoogleMap:
 
 
 if __name__ == "__main__":
-    browser = SeleniumGoogleMap(coordinates='1234')
+    browser = SeleniumGoogleMap()
     browser.open_map()
     browser.initial_location()
     browser.initiate_direction()
