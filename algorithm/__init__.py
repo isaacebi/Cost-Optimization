@@ -1,1 +1,1 @@
-from .gwo import GreyWolfOptimizer
+from .gwo import *
